@@ -11,7 +11,7 @@
 
                     {{ if isset .Site.Params "best_posts" }}
                         <div class="mx-0 mx-md-4 best-posts">
-                            <div class="page-heading">📌 {{ i18n "pinned" }}</div>
+                            <div class="page-heading">{{ i18n "pinned" }}</div>
                             <ul>
                                 {{ range .Site.Params.best_posts }}
                                     <li>
@@ -22,27 +22,14 @@
                         </div>
                     {{ end }}
 
-                    {{ if isset .Site.Params "latestpostcount" }}
-                        <div class="mx-0 mx-md-4 posts">
-                            {{ $nbPosts := len (where .Site.RegularPages "Section" "blog") }}
-
-                            {{ if gt $nbPosts 0 }}
-                                <div class="page-heading">{{ i18n "latest_posts" }}</div>
-                                <ul class="px-0">
-                                    {{ range (first .Site.Params.latestpostcount (where .Site.RegularPages "Section" "blog")).GroupByDate "Jan, 2006" "desc" }}
-                                        <li class="groupby">{{ .Key }}</li>
-                                        {{ range sort .Pages "Date" "desc" }}
-                                            {{ partial "list" . }}
-                                        {{ end }}
-                                    {{ end }}
-                                </ul>
-
-                                {{ if gt $nbPosts .Site.Params.latestpostcount }}
-                                    <a href="./blog/" class="font-italic mt-4 see-more">{{ i18n "see_more" }}</a>
+                    <div class="mx-0 mx-md-4 posts">
+                        <div class="page-heading">Index</div>
+                            <ul>
+                                {{ range .Site.Sections.ByTitle }}
+                                    {{ partial "sect" . }}
                                 {{ end }}
-                            {{ end }}
-                        </div>
-                    {{ end }}
+                            </ul>
+                    </div>
                 </div>
             </div>
         </div>

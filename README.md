@@ -1,12 +1,5 @@
 # hugo-alageek-theme
-A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's rewritten with **Bootstrap 4**.
-
-![](/images/screenshot.png)
-
-Websites that are using hugo with alaGeek theme:
-
-* https://alageek.com
-* https://gokmengorgen.net
+An [alageek](https://github.com/gkmngrgn/hugo-alageek-theme) based theme.
 
 ## Features
 
@@ -19,11 +12,10 @@ Websites that are using hugo with alaGeek theme:
     - Linkedin
     - Mastodon
     - Twitter
-* Homepage with latest and best posts.
+* Homepage with best posts and a section tree
 * Single pages, sections with a header and a list of articles
 * Syntax highlighting with `hightlightjs`
 * Progressive images
-* Twitter cards support
 * LaTeX support with MathJax
 * Possibility to add extra scripts with `footer_extra.html`
 * Disqus support
@@ -51,9 +43,9 @@ Websites that are using hugo with alaGeek theme:
 
 ## Typography
 
-* Title: Merriweather Sans
-* Content: Merriweather
-* Code: Fira Code
+* Title: Eczar
+* Content: Alike Angular
+* Code: Source Code Pro
 
 ## License
 

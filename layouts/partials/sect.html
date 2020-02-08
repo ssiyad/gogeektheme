@@ -1,0 +1,16 @@
+{{ if .Dir }}
+    {{ if .Pages }}
+        <li>
+            {{ .Title }}
+        </li>
+        <ul>
+            {{ range .Pages.ByTitle }}
+                {{ partial "sect" . }}
+            {{ end}}
+        </ul>
+    {{ else }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+    {{ end }}
+{{ end }}
