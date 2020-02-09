@@ -25,7 +25,7 @@
                     <div class="mx-0 mx-md-4 posts">
                         <div class="page-heading">Index</div>
                             <ul>
-                                {{ range .Site.Sections.ByTitle }}
+                                {{ range .Site.Sections.ByWeight }}
                                     {{ partial "sect" . }}
                                 {{ end }}
                             </ul>
